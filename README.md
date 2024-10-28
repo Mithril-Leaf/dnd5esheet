@@ -116,8 +116,8 @@ yarn start
 A Dockerfile is provided to containerize the application. To build and run the Docker image:
 
 ```
-docker build -t ouryard-demo .
-docker run -p 3001:3001 ouryard-demo
+docker build -t dnd5esheet .
+docker run -p 3001:3001 dnd5esheet
 ```
 
 ## Conclusion
