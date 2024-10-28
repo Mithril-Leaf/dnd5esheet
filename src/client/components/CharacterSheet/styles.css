@@ -1,0 +1,83 @@
+.character-sheet {
+	padding: 24px;
+	max-width: 1200px;
+	margin: 0 auto;
+}
+.top-controls {
+	display: flex;
+	align-items: center;
+	gap: 20px;
+	padding: 10px;
+	background: #E4D4AC;
+	border: 1px solid #E4D4AC;
+	border-radius: 4px;
+	box-shadow: 0 1px 2px -2px rgba(0, 0, 0, 0.16), 0 3px 6px 0
+		rgba(0, 0, 0, 0.12), 0 5px 12px 4px rgba(0, 0, 0, 0.09);
+}
+
+.header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 20px;
+}
+.abilities-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	gap: 16px;
+}
+
+.ability-section {
+	margin-bottom: 16px;
+}
+.d20-roll {
+	display: inline-flex;
+	align-items: center;
+	gap: 8px;
+	margin-left: 16px;
+}
+
+.ability-score {
+	display: flex;
+	align-items: center;
+	gap: 16px;
+}
+
+.skill-item {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	padding: 8px 0;
+	border-bottom: 1px solid #f0f0f0;
+}
+
+.skill-item .ant-alert {
+	margin-top: 8px;
+	width: 100%;
+}
+
+.tool-entry {
+	display: flex;
+	align-items: center;
+	gap: 16px;
+}
+
+.tool-roll {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+}
+
+.roll-result {
+	display: inline-block;
+	background: #727012;
+	padding: 4px 8px;
+	border-radius: 4px;
+}
+
+.top-controls .ant-alert {
+	background: #E4D4AC;
+	border: 1px solid #8B4513;
+	box-shadow: 0 1px 2px -2px rgba(0, 0, 0, 0.16), 0 3px 6px 0
+		rgba(0, 0, 0, 0.12), 0 5px 12px 4px rgba(0, 0, 0, 0.09);
+}

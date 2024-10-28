@@ -1,0 +1,325 @@
+@import url('https://fonts.googleapis.com/css2?family=MedievalSharp&family=Metamorphous&display=swap');
+
+:root {
+  --parchment: #f4e4bc;
+  --parchment-dark: #e4d4ac;
+  --ink: #2b1810;
+  --leather: #8b4513;
+  --gold: #bf9b30;
+  --blood-red: #8b0000;
+  --shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background: url('/src/client/components/CharacterSheet/indieground-vintagepaper-textures-01.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  color: var(--ink);
+  font-family: 'Metamorphous', serif;
+}
+.site-layout-content {
+  min-height: 100vh;
+  padding: 24px;
+  background: transparent;
+}
+
+.ant-layout {
+  background: transparent;
+}
+
+.character-sheet {
+  max-width: 1200px;
+  margin: 1rem auto;
+  padding: 1.5rem;
+  background: url('/src/client/components/CharacterSheet/indieground-vintagepaper-textures-02.jpg');
+  background-size: cover;
+  border: 8px solid var(--leather);
+  box-shadow: var(--shadow);
+  position: relative;
+}
+
+.header {
+  font-family: 'MedievalSharp', cursive;
+  border-bottom: 2px solid var(--ink);
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+}
+
+.header h1 {
+  color: var(--blood-red);
+  font-size: 3rem;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+.abilities-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1rem;
+}
+
+.modifier {
+  color: var(--blood-red);
+  font-family: 'MedievalSharp', cursive;
+  font-size: 1.25rem;
+}
+
+.skill-item {
+  border-bottom: 1px solid rgba(139, 69, 19, 0.2);
+  padding: 4px 0;
+}
+
+.ant-card-body {
+  padding: 12px;
+}
+
+.ant-card {
+  background: var(--parchment-dark);
+  border: 2px solid var(--leather);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  transition: transform 0.2s ease;
+}
+
+.ant-card:hover {
+  transform: translateY(-2px);
+}
+
+.ant-card-head {
+  background: var(--leather);
+  font-family: 'MedievalSharp', cursive;
+  border-top-left-radius: var(--border-radius);
+  border-top-right-radius: var(--border-radius);
+}
+.ability-score input {
+  font-size: 1.5rem;
+  width: 80px;
+  text-align: center;
+  background: var(--parchment);
+  border: 2px solid var(--leather);
+  font-family: 'Metamorphous', serif;
+  border-radius: 8px;
+  padding: 0.5rem;
+  margin: 1rem 0;
+}
+
+.modifier {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--blood-red);
+  font-family: 'MedievalSharp', cursive;
+}
+
+.modifier-container {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.skill-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 4px 0;
+}
+
+.skill-item .modifier {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.ability-score {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.ability-score .modifier {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+.modifier-roll-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.tool-roll {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  margin-left: auto;
+}
+
+.skill-item {
+  display: grid;
+  grid-template-columns: auto 1fr auto auto;
+  align-items: center;
+  gap: 8px;
+  padding: 4px 0;
+  height: 32px;
+}
+
+.skill-item:hover {
+  background-color: var(--background-color);
+}
+
+.ant-btn-primary {
+  background: var(--leather);
+  border-color: var(--gold);
+  font-family: 'Metamorphous', serif;
+  padding: 2px 8px;
+  height: 24px;
+  font-size: 12px;
+  line-height: 24px;
+}
+
+.ant-btn-primary:hover {
+  background: var(--gold);
+  border-color: var(--leather);
+}
+
+.modifier {
+  display: flex;
+  align-items: center;
+  height: 24px;
+  line-height: 24px;
+}
+
+.d20-roll {
+  display: flex;
+  align-items: center;
+  height: 24px;
+}
+
+.ant-alert {
+  margin-top: 1rem;
+  border-radius: 8px;
+}
+
+.d20-roll .ant-alert {
+  padding: 4px 8px;
+  min-height: unset;
+}
+.proficiency-bonus {
+  background: var(--parchment-dark);
+  border: 2px solid var(--leather);
+  padding: 1rem;
+  border-radius: var(--border-radius);
+  display: inline-flex;
+  align-items: center;
+  gap: 1rem;
+  box-shadow: var(--shadow);
+}
+
+.proficiency-bonus input {
+  width: 60px;
+  text-align: center;
+  border: 2px solid var(--secondary-color);
+  border-radius: 6px;
+  padding: 0.25rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.mb-4 {
+  margin-bottom: 16px;
+}
+
+.p-4 {
+  padding: 16px;
+}
+
+/* Add decorative corners */
+.character-sheet::before,
+.character-sheet::after {
+  content: '✦';
+  position: absolute;
+  color: var(--gold);
+  font-size: 2rem;
+}
+
+.character-sheet::before {
+  top: 1rem;
+  left: 1rem;
+}
+
+.character-sheet::after {
+  bottom: 1rem;
+  right: 1rem;
+}
+
+.ant-alert-message {
+  font-size: 14px;
+  font-family: 'MedievalSharp', cursive;
+}
+
+.skill-item .modifier {
+  font-size: 14px;
+}
+
+.ant-alert-description {
+  font-size: 14px;
+}
+
+.character-info {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.details-card, .tools-card {
+  background: url('/src/client/components/CharacterSheet/indieground-vintagepaper-textures-02.jpg');
+  background-size: cover;
+}
+.tool-rolls {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.tool-roll {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 4px 0;
+  border-bottom: 1px solid rgba(139, 69, 19, 0.2);
+}
+
+.tool-entry {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+  padding: 4px 8px;
+}
+
+.tool-entry .ant-input {
+  flex: 1;
+  font-family: 'Metamorphous', serif;
+}
+
+.tool-entry .modifier {
+  font-family: 'MedievalSharp', cursive;
+  color: var(--blood-red);
+  font-size: 14px;
+  min-width: 2em;
+  text-align: center;
+}
+
+.tool-entry .roll-result {
+  font-family: 'MedievalSharp', cursive;
+  color: var(--blood-red);
+  font-size: 14px;
+  min-width: 8em;
+}
